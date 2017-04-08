@@ -1,8 +1,21 @@
+```
+---
+title: 'selective UAC (for per machine / per user) in WiX'
+date: '2016-10-01 19:13:00'
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+---
+```
+
 This post details how to build an installer that has a radio button to allow the user to either continue with a per-machine or per-user installation and then trigger User Account Control settings (admin rights) for ONLY per-machine installations.
 
 
 
-#### Package Attributes
+### Package Attributes
 
 The package element has the attributes *‘nstallPrivileges* and *InstallScope* which can be used to set the elevation level of the installer as well as the install scope of the installation. However both of these are depreciated and produce rather confusing results, especially when used in conjunction with other approaches.
 
@@ -23,7 +36,7 @@ Go the WiX source code found here and browse to the *wixlib* folder. Find *WixUI
 
 
 
-#### Custom Actions
+### Custom Actions
 
 Custom Actions can be used to carry out property changes and trigger other actions. *WixUI_Advanced* already contains a bunch of these. The order and when these actions are triggered need to be changed. Since the contents of *WixUI_Advanced* can’t be changed, this is where *WixUI_MySetup* will be used.
 
@@ -36,7 +49,7 @@ Custom Action names used in a WiX project must be unique (across all files). The
 
 
 
-#### Sequences
+### Sequences
 
 Sequences in WiX define which actions are triggered and in which order, during events. The *InstallUISequence* defines which dialog sets will be shown to the user and in what order from the moment the setup is run. The *InstallExecuteSequence* defines the actions that will be carried out when the product is actually being installed.
 
@@ -94,7 +107,7 @@ Note that the ALLUSERS attribute must be set to “{}” and not 0, for it to be
 
 
 
-#### Setting the install directory
+### Setting the install directory
 
 6. Finally add the following code to *WixUI_MySetup*. This triggers a variable change depending on the (radio button) choice made by the user in the *InstallScope* dialog and will set the default install location based on it.
 
@@ -107,7 +120,7 @@ Dialog="InstallScopeDlg" Control="Next" Event="DoAction" Value="MyWixSetDefaultP
 
 
 
-#### Clean up the default template
+### Clean up the default template
 
 7. The default template has an attribute called *InstallScope* in the package tag, which needs to be removed.
 

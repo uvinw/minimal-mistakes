@@ -1,8 +1,21 @@
+```
+---
+title: 'a quick intro to WiX Installer'
+date: '2016-08-31 19:13:00'
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+---
+```
+
 There are a couple of ways to create an installer for an application after it’s ready to be shipped. Some of these ways are quite specific to the application and the language used to develop it. WiX Installer can be used for pretty much anything on the Windows platform. Here's a quick crash course to get going.
 
 
 
-#### Getting Started
+### Getting Started
 
 There are two main ways to work with WiX.
 
@@ -22,7 +35,7 @@ Using VS is most certainly the recommended way for a number of reasons. It’s e
 
 
 
-#### Structure of a Project
+### Structure of a Project
 
 - .wxs files
 
@@ -34,7 +47,7 @@ This file contains some meta data about your VS installer project. You can use t
 
 
 
-#### Creating a quick installer
+### Creating a quick installer
 
 1. First create a new installer project in VS. This results in a sample Product.wxs file.
 2. Add a company name to the ‘Manufacturer’ attribute in the Product tag.
