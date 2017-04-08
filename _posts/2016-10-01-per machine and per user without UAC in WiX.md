@@ -1,4 +1,3 @@
-```
 ---
 title: 'selective UAC (for per machine / per user) in WiX'
 date: '2016-10-01 19:13:00'
@@ -9,7 +8,6 @@ comments: true
 share: true
 related: true
 ---
-```
 
 This post details how to build an installer that has a radio button to allow the user to either continue with a per-machine or per-user installation and then trigger User Account Control settings (admin rights) for ONLY per-machine installations.
 

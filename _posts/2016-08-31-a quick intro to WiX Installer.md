@@ -1,4 +1,3 @@
-```
 ---
 title: 'a quick intro to WiX Installer'
 date: '2016-08-31 19:13:00'
@@ -9,7 +8,6 @@ comments: true
 share: true
 related: true
 ---
-```
 
 There are a couple of ways to create an installer for an application after it’s ready to be shipped. Some of these ways are quite specific to the application and the language used to develop it. WiX Installer can be used for pretty much anything on the Windows platform. Here's a quick crash course to get going.
 
