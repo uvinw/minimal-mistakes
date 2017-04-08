@@ -1,5 +1,5 @@
 ---
-title: 'selective UAC (for per machine / per user) in WiX'
+``title: 'selective UAC (for per machine / per user) in WiX'
 date: '2016-10-01 19:13:00'
 layout: single
 author_profile: true
@@ -19,7 +19,7 @@ The package element has the attributes *‘nstallPrivileges* and *InstallScope* 
 
 The only viable approach is using the *WixAppFolder* property . Unfortunately this isn’t implemented properly in the default dialog sets, and results in the installer always asking for admin rights. Props to Alexander Egorov for (almost) figuring out a solution, which with some changes, works exactly as desired.
 
-![wix](http://uvinw.github.io/assets/images/2016-10-01-wix.png)
+![wix-proj](http://uvinw.github.io/assets/images/2016-10-01-wix.png)
 
 Without going into too much detail, the default Wix dialog set that gives the user a choice for separate per user and per machine installations (based on a radio button) is the WixUI_Advanced dialog. First, get this configured for the setup project. It’s as simple as referencing WixUIExtension.dll and adding a new UIRef to WixUI_Advanced in Product.wxs. After this is done, and the  advance interface works as expected, some modifications need to correct the UAC issue.
 

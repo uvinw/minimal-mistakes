@@ -77,9 +77,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "uvinw"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "something something cool"
+  name             : "Uvin"
+  avatar           : "/assets/images/self.png"
+  bio              : "solving problems"
   location         : "LK"
   email            :
   uri              :
