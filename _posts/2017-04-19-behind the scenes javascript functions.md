@@ -15,10 +15,10 @@ Take the following example.  A simple function called *Util* that has another fu
 
 ```javascript
 function Util() {
-	console.log('from Util');	
-	this.printer1 = function (param) {
+    console.log('from Util');	
+    this.printer1 = function (param) {
         console.log(param);
-  	};
+    };
 }
 ```
 
@@ -38,7 +38,7 @@ Everything in your page (variables, arrays, objects, functions) reside in this w
 
 The scope will now contain a new key called *Util* and it's value will be the function we defined above.
 
-![util function in console](http://uvinw.github.io/assets/images/consoleutilfunction.png)
+![util function in console](http://uvinw.github.io/assets/images/consoleutilfunction.PNG)
 
 To be more specific here, what we did above was actually define a *function constructor*.  If you check the current window scope, there will be a *Util* function, but no *printer1* function. 
 
