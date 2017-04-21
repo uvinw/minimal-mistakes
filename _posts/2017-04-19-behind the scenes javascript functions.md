@@ -38,7 +38,7 @@ Everything in your page (variables, arrays, objects, functions) reside in this w
 
 The scope will now contain a new key called *Util* and it's value will be the function we defined above.
 
-![util function in console](http://uvinw.github.io/assets/images/consolewindow.png)
+![util function in console](http://uvinw.github.io/assets/images/consoleutilfunction.png)
 
 To be more specific here, what we did above was actually define a *function constructor*.  If you check the current window scope, there will be a *Util* function, but no *printer1* function. 
 
@@ -98,7 +98,7 @@ Util.printer2 = function (param) {
 
 Here's what happens behind the scenes now. 
 
-Util, the function constructor object is accessed from the current scope and a new key-value pair is added to the object. The key being *printer2* and the value being a new function constructor. The scope where this new object is added is inside the existing Util constructor. Why? Because we called `Util.`.
+*Util*, the function constructor object is accessed from the current scope and a new key-value pair is added to the object. The key being *printer2* and the value being a new function constructor. The scope where this new object is added is inside the existing *Util* constructor. Why? Because we called `Util.`(dot).
 
 Print the window scope again using `console.dir(window)` and look for the *Util* key. This key will now contain both the function constructor for our *Util* function (this is not visible in the console as this is an object constructor, but know that it's there), as well as a another key called *printer2* which holds a new function constructor for the *printer2* function. 
 
@@ -116,13 +116,13 @@ foo :  {
 
 This means that *Util* is a key found inside the window scope that holds a reference to its function constructor. This function does not exist in the current scope, only the key (a reference to the constructor) does. And the constructor exists **inside** the object (value of the said *Util* key). The new function *printer2* is now in this scope, and in the same hierarchy as the *Util* constructor (inside the object that is pointed to by the *Util* key).
 
-So without running any function constructors (and without having to create a new Util function object), we can directly call *printer2* like so.
+So without running any function constructors (and without having to create a new *Util* function object), we can directly call *printer2* like so.
 
 ```javascript
 Util.printer2('yo');
 > yo
 ```
 
-So a new object of Util is not made, but *printer2* is accessible from within that object (the function constructor) and can be called. 
+So a new object of *Util* is not made, but *printer2* is accessible from within that object (the function constructor) and can be called. 
 
 I know this is hard visualize, but it happens to be how JS works. Whew.
