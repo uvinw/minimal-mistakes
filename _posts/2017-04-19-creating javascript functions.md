@@ -15,12 +15,10 @@ Take the following example.  A simple function called *Util* that has another fu
 
 ```javascript
 function Util() {
-  
-		 console.log('from Util');	
-  
-		 this.printer1 = function (param) {
-             console.log(param);
-  	     };
+	console.log('from Util');	
+	this.printer1 = function (param) {
+        console.log(param);
+  	};
 }
 ```
 
@@ -106,13 +104,13 @@ Print the window scope again using `console.dir(window)` and look for the *Util*
 
 ```javascript
 Util : {
-  printer2 : function (param) {
-    console.log(param);
-  },
-  __proto__ : ...
+   printer2 : function (param) {
+       console.log(param);
+   },
+   __proto__ : ...
 }, 
 foo :  {
-  //another object in the window scope
+   //another object in the window scope
 },
 ```
 
