@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "blog ~uvinw"
+title                    : "VARDUMP"
 title_separator          : "-"
-name                     : "uvinw"
-description              : "a collection of mildly interesting posts"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Uvin Withana"
+description              : "software engineer / ramblings"
+url                      : "http://uvinw.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "uvinw/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -72,12 +72,12 @@ social:
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-101483006-1
 
 
 # Site Author
 author:
-  name             : "Uvin"
+  name             : "U W"
   avatar           : "/assets/images/self.jpg"
   bio              : "solving problems"
   location         : "LK"
