@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Lux"
+title                    : "Uvin Withana"
 title_separator          : "-"
 name                     : "Uvin Withana"
 description              : "a blog about technology and software development"
@@ -77,7 +77,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lux"
+  name             : "Uvin Withana"
   avatar           : "/assets/images/self.jpg"
   bio              : "a mildly interesting dev diary"
   location         : "Sri Lanka"

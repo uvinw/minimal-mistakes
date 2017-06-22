@@ -1,5 +1,5 @@
 ---
-title: 'a gentle introduction to Wix Installer'
+title: 'a gentle intro to Wix Installer'
 date: '2016-08-31 19:13:00'
 layout: single
 author_profile: true
@@ -19,15 +19,21 @@ Here's a quick crash course to get going.
 
 ### getting started
 
+
+
 WiX is a toolset. Download it and install it from their official website. 
 
 There are two main ways to work with WiX.
+
+
 
 1. Using the command line
 
 This is the quicker approach and can be used to build an installer in a matter of minutes. Just install WiX Toolset, write your setup file in xml format (this will be a .wxs file) and use the WiX tools to compile and link your files. 
 
 I encountered one such installer at work, which was an old legacy installer that was passed down developers over the years. Every time the install logic needed to be changed, an unfortunate dev had to manually change the files referenced in the single (yes, single) .wxs file and make any changes to the logic. I followed suite the first time I had to work with WiX, because I didn't know better. The next time however, I decided to rewrite a new installer using the second approach outlined below. 
+
+
 
 2. Using Visual Studio
 
@@ -43,6 +49,8 @@ Using VS is most certainly the recommended way for a number of reasons. It’s e
 
 ### structure of a project
 
+
+
 What the hell are these file extensions? Let's break them down.
 
 - .wxs files
@@ -56,6 +64,8 @@ This file contains some meta data about your VS installer project. You can use t
 
 
 ### creating a simple installer
+
+
 
 1. First create a new installer project in VS. This results in a sample Product.wxs file.
 
@@ -85,4 +95,4 @@ Note that there are no install configurations available to the user. It installs
 <MediaTemplate EmbedCab="yes" />
 ```
 
-And the most simple installer is done.
+And the simple installer is done.
