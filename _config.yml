@@ -9,7 +9,7 @@
 locale                   : "en"
 title                    : "Uvin Withana"
 title_separator          : "-"
-name                     : "Uvin Withana"
+name                     : ""
 description              : "a blog about technology and software development"
 url                      : "http://uvinw.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -77,9 +77,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Uvin Withana"
+  name             : ""
   avatar           : "/assets/images/self.jpg"
-  bio              : "a mildly interesting dev diary"
+  bio              : "mildly interesting dev diary"
   location         : "Sri Lanka"
   email            :
   uri              :
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "uvinw"
   google_plus      :
   keybase          :
   instagram        :
