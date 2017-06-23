@@ -27,7 +27,7 @@ There are two main ways to work with WiX.
 
 
 
-1. Using the command line
+1 - Using the command line
 
 This is the quicker approach and can be used to build an installer in a matter of minutes. Just install WiX Toolset, write your setup file in xml format (this will be a .wxs file) and use the WiX tools to compile and link your files. 
 
@@ -35,7 +35,7 @@ I encountered one such installer at work, which was an old legacy installer that
 
 
 
-2. Using Visual Studio
+2 - Using Visual Studio
 
 Using VS is most certainly the recommended way for a number of reasons. It’s easier to organize the setup files and imports, and will produce a faster workflow as it’s possible to quickly compile and find any immediate errors in the files. If the application isn’t a school project that’s going to be deleted next week, this is the way to go. So first,
 

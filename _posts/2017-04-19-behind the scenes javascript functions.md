@@ -1,5 +1,5 @@
 ---
-title: 'behind the scenes of JavaScript functions'
+title: 'functions and scopes in JS'
 date: '2017-04-19 22:12:00'
 layout: single
 author_profile: true
@@ -22,13 +22,13 @@ function Util() {
 }
 ```
 
-In JS, all variables and functions are stored inside objects, and those in turn are stored inside more objects; until finally there is a single object that holds everything. This object is your usually the browser window.
-
-In JS, functions can be stored in and passed around like variables. Also, remember that functions (both constructors and instances) are objects.
+In JS, all variables and functions are stored inside objects, and those in turn are stored inside more objects; until finally there is a single object that holds everything. This object is your usually the browser window. In JS, functions can be stored in and passed around like variables. Also, remember that functions (both constructors and instances) are objects.
 
 
 
-### Objects in JS
+### objects in JS
+
+
 
 Now objects in JavaScript consist of key-value pairs. To see what's in your window object, open up a browser window, or a [new fiddle](https://jsfiddle.net/6tdp5gaw/), and enter `console.dir(window)` in the console. 
 
@@ -55,13 +55,15 @@ Remember, most things are objects in JS. Sort of.
 
 
 
-### New Keyword
+### the new keyword
+
+
 
 ```javascript
 var myUtil = new Util();
 ```
 
-When using the new keyword on a function, a sequence of events take place. 
+When using the *new* keyword on a function, a sequence of events take place. 
 
 A new variable called *myUtil* is defined and assigned a new object. This object automatically inherits the prototype object (cause its JavaScript). This new object is also passed the function constructor called *Util*. Note that this runs the function constructor (*Util*), but in a different scope. This scope is inside the myUtil variable (or rather its value as 'myUtil' is simply a key in the parent scope).
 
@@ -79,7 +81,9 @@ myUtil.printer1('sup');
 
 
 
-### Post Definition
+### post definition
+
+
 
 Going back to the code, let's add a new function to *Util*, after it is defined
 
@@ -114,7 +118,9 @@ foo :  {
 },
 ```
 
-This means that *Util* is a key found inside the window scope that holds a reference to its function constructor. This function does not exist in the current scope, only the key (a reference to the constructor) does. And the constructor exists **inside** the object (value of the said *Util* key). The new function *printer2* is now in this scope, and in the same hierarchy as the *Util* constructor (inside the object that is pointed to by the *Util* key).
+This means that *Util* is a key found inside the window scope that holds a reference to its function constructor. This function does not exist in the current scope, only the key (a reference to the constructor) does.
+
+The new function *printer2* is now in this scope, and in the same hierarchy as the *Util* constructor (inside the object that is pointed to by the *Util* key).
 
 So without running any function constructors (and without having to create a new *Util* function object), we can directly call *printer2* like so.
 
@@ -125,4 +131,8 @@ Util.printer2('yo');
 
 So a new object of *Util* is not made, but *printer2* is accessible from within that object (the function constructor) and can be called. 
 
-I know this is hard visualize, but it happens to be how JS works. Whew.
+Very interesting stuff.
+
+
+
+This is topic is further broken down and thoroughly explained in the [Scopes and Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures) book of the You Don't Know JS series.
