@@ -1,5 +1,5 @@
 ---
-title: 'functions and scopes in JS'
+title: 'Functions and Scopes in JS'
 date: '2017-04-19 22:12:00'
 layout: single
 author_profile: true

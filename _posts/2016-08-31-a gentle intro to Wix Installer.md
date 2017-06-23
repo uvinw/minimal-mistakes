@@ -1,5 +1,5 @@
 ---
-title: 'a gentle intro to Wix Installer'
+title: 'A gentle intro to Wix Installer'
 date: '2016-08-31 19:13:00'
 layout: single
 author_profile: true

@@ -1,5 +1,5 @@
 ---
-title: 'why React Native?'
+title: 'Why React Native?'
 date: '2017-04-11 07:01:00'
 layout: single
 author_profile: true

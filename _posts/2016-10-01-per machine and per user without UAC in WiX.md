@@ -1,5 +1,5 @@
 ---
-title: 'proper UAC control (for per machine / per user) in WiX'
+title: 'Proper UAC Control (for per machine / per user) in WiX'
 date: '2016-10-01 19:13:00'
 layout: single
 author_profile: true
